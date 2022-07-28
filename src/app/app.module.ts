@@ -10,7 +10,12 @@ import { RentalComponent } from './components/rental/rental.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CarDetailComponent } from './components/car-detail/car-detail.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule} from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { CarDetailPageComponent } from './components/car-detail-page/car-detail-page.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +26,18 @@ import { CarDetailComponent } from './components/car-detail/car-detail.component
     CarComponent,
     RentalComponent,
     CustomerComponent,
-    CarDetailComponent
+    CarDetailComponent,
+    CarDetailPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatButtonModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

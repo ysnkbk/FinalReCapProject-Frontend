@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from 'src/app/models/car';
 import {HttpClient} from '@angular/common/http';
-import { CarResponseModel } from 'src/app/models/carResponseModel';
 import { CarService } from 'src/app/services/car.service';
+import { Color } from 'src/app/models/color';
+import { Brand } from 'src/app/models/brand';
+import { ActivatedRoute } from '@angular/router';
+import { CarDetailsDto } from 'src/app/models/carDetailsDto';
 
 //axios,fetch
 @Component({
@@ -13,11 +16,13 @@ import { CarService } from 'src/app/services/car.service';
 export class CarComponent implements OnInit {
 
   cars:Car[]= [];
+  carDetailDtos:CarDetailsDto[]=[];
   dataLoaded=false;
-  constructor(private carService:CarService) { }
+  constructor(private carService:CarService,
+    ) { }
 
   ngOnInit(): void {
-    this.getCars();
+
   }
 
   getCars(){
@@ -26,6 +31,7 @@ export class CarComponent implements OnInit {
       this.dataLoaded=true;
     })
   }
+
 
 
 

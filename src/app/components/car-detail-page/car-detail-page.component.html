@@ -1,0 +1,30 @@
+<div class="container" *ngFor="let car of carDetailDtos">
+  <img class="imgClass" src="https://localhost:44322/Uploads/Images/{{car.imagePath}}" alt="">
+</div>
+
+<div class="table-responsive-md mt-3">
+    <table class="table table-striped table-hover table-bordered">
+      <thead *ngFor="let car of carDetailDtos">
+        <tr>
+          <th>Marka</th>
+          <td>{{ car.brandName }}</td>
+        </tr>
+        <tr>
+          <th>Renk</th>
+          <td>{{ car.colorName }}</td>
+        </tr>
+        <tr>
+          <th>Model</th>
+          <td>{{ car.modelYear }}</td>
+        </tr>
+        <tr>
+          <th>Günlük ücret</th>
+          <td>{{ car.dailyPrice }} ₺</td>
+        </tr>
+        <tr>
+          <th>Açıklama</th>
+          <td>{{ car.descriptions }}</td>
+        </tr>
+      </thead>
+    </table>
+  </div>
